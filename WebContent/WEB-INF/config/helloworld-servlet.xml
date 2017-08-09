@@ -13,35 +13,10 @@
 	   
 	<context:component-scan base-package="com.endless.web">
 	</context:component-scan> 
-	<context:annotation-config />
-	
-	<mvc:annotation-driven  validator="validator" conversion-service="conversionService" /> 
-	
-    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
-    </bean>
-	
- 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >
-		<property name="maxUploadSize" value="102400" />
-	</bean>  
 
-<!-- 	<bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver" >
-	</bean> --> 
-	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-	
- 	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean" >
-		<property name="converters" >
-			<list>
-				<bean class="com.endless.web.converters.MyEmployeeConverter" />
-				<bean class="com.endless.web.converters.MyDateConverter" >
-					<property name="format" value="yyyy-MM-dd" />
-				</bean>			
-			</list>
-		</property>
-	</bean> 
-	
-	
+		
 </beans> 
