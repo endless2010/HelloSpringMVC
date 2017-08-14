@@ -27,6 +27,14 @@
 		<servlet-name>springmvc</servlet-name>
 		<url-pattern>*.mvc</url-pattern>
 	</servlet-mapping>
+	<context-param>
+        <param-name>projectName</param-name>
+        <param-value>HelloSpringMVC</param-value>
+    </context-param>
+    <context-param>
+    	<param-name>projectVersion</param-name>
+        <param-value>1.0</param-value>
+    </context-param>
 </web-app>
 
 		<!-- <multipart-config> <location>/tmp</location> <max-file-size>1048576</max-file-size> 
